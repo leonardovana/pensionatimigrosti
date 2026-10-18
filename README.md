@@ -1,4 +1,4 @@
-# Website
+# Associazione Pensionati Migros Ticino
 
 Static site built with [Hugo](https://gohugo.io) from Markdown, published to GitHub
 Pages by GitHub Actions on every push to `main`.
@@ -8,16 +8,18 @@ Pages by GitHub Actions on every push to `main`.
 | What | Where |
 |------|-------|
 | Home page text | `content/_index.md` |
-| About page | `content/about.md` |
-| Blog posts | `content/posts/<name>.md` |
-| Photo galleries | `content/gallery/<event>/` |
+| Associazione, Statuto, Comitato | `content/associazione/` |
+| Scopo, Privacy Policy | `content/scopo.md`, `content/privacy.md` |
+| Notizie | `content/notizie/<name>.md` |
+| Foto (one folder per event) | `content/foto/<event>/` |
+| PDFs and other files | `static/documenti/` (served at `/documenti/...`) |
 | Site title, menu | `hugo.toml` |
 | Look and feel | `assets/css/main.css`, `layouts/` |
 
 New post:
 
 ```bash
-hugo new content posts/my-post.md
+hugo new content notizie/my-post.md
 ```
 
 Posts are created with `draft: true`; remove that line (or set it to `false`) to
@@ -28,22 +30,22 @@ publish.
 Each event is a folder with an `index.md` and its photos:
 
 ```
-content/gallery/2026-10-25-gurten-classic/
+content/foto/2026-09-22-gita-olivone/
   index.md
   001.jpg
   002.jpg
 ```
 
 ```bash
-hugo new content gallery/2026-10-25-gurten-classic/index.md
+hugo new content foto/2026-09-22-gita-olivone/index.md
 ```
 
 then copy the photos into that folder. The front matter of `index.md`:
 
 ```yaml
-title: "Gurten Classic"
-date: 2026-10-25
-location: "Bern"
+title: "Gita 2026 Olivone"
+date: 2026-09-22
+location: "Olivone"
 cover: "002.jpg"          # optional: photo on the gallery card (default: first)
 resources:                # optional captions
   - src: "001.jpg"
@@ -58,7 +60,7 @@ Keep the repository small: resize photos to ~2500 px on the long side before
 committing (a GitHub repository should stay well under 1 GB), e.g.
 
 ```bash
-mogrify -resize '2500x2500>' -quality 85 content/gallery/<event>/*.jpg
+mogrify -resize '2500x2500>' -quality 85 content/foto/<event>/*.jpg
 ```
 
 ## Preview locally

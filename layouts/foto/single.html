@@ -2,12 +2,13 @@
 <section class="prose">
   <p class="meta"><a href="{{ .Parent.RelPermalink }}">← {{ .Parent.Title }}</a></p>
   <h1>{{ .Title }}</h1>
-  <p class="meta">{{ .Date.Format "2 January 2006" }}{{ with .Params.location }} · {{ . }}{{ end }}</p>
+  <p class="meta">{{ .Date | time.Format ":date_long" }}{{ with .Params.location }} · {{ . }}{{ end }}</p>
   {{ .Content }}
 </section>
 
 {{/* Every image in the event folder, sorted by file name. Captions come from
      the `resources` list in the front matter (title = caption). */}}
+{{ with .Resources.ByType "image" }}{{ else }}<p class="meta">Le foto di questo evento non sono ancora state caricate.</p>{{ end }}
 <div class="photo-grid">
   {{ range sort (.Resources.ByType "image") "Name" }}
     {{ $thumb := .Fill "480x480 Center" }}
@@ -22,11 +23,11 @@
   {{ end }}
 </div>
 
-<dialog class="lightbox" aria-label="Photo viewer">
-  <button class="lb-close" aria-label="Close">×</button>
-  <button class="lb-prev" aria-label="Previous photo">‹</button>
+<dialog class="lightbox" aria-label="Visualizzatore foto">
+  <button class="lb-close" aria-label="Chiudi">×</button>
+  <button class="lb-prev" aria-label="Foto precedente">‹</button>
   <figure><img alt=""><figcaption></figcaption></figure>
-  <button class="lb-next" aria-label="Next photo">›</button>
+  <button class="lb-next" aria-label="Foto successiva">›</button>
 </dialog>
 {{ with resources.Get "js/lightbox.js" | minify | fingerprint }}
 <script src="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" defer></script>

@@ -1,13 +1,13 @@
 # Site settings. baseURL is overridden by the GitHub Pages workflow.
-baseURL = "https://example.org/"
-languageCode = "en"
-title = "My Website"
+baseURL = "https://www.pensionatimigrosti.ch/"
+languageCode = "it-CH"
+defaultContentLanguage = "it"
+title = "Associazione Pensionati Migros Ticino"
 enableRobotsTXT = true
 disableKinds = ["taxonomy", "term"]
 
 [params]
-  description = "Notes, stories and photos."
-  author = "Patrick"
+  description = "Tenere sempre vivo e rispettare lo spirito di appartenenza alla Migros"
 
 [menus]
   [[menus.main]]
@@ -15,17 +15,21 @@ disableKinds = ["taxonomy", "term"]
     pageRef = "/"
     weight = 10
   [[menus.main]]
-    name = "Posts"
-    pageRef = "/posts"
+    name = "Associazione"
+    pageRef = "/associazione"
     weight = 20
   [[menus.main]]
-    name = "Gallery"
-    pageRef = "/gallery"
+    name = "Scopo"
+    pageRef = "/scopo"
     weight = 30
   [[menus.main]]
-    name = "About"
-    pageRef = "/about"
+    name = "Notizie"
+    pageRef = "/notizie"
     weight = 40
+  [[menus.main]]
+    name = "Foto"
+    pageRef = "/foto"
+    weight = 50
 
 [markup.goldmark.renderer]
   # Allow raw HTML inside Markdown.
