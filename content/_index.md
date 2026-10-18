@@ -8,5 +8,5 @@ culturali per i Soci.
 
 <a class="featured" href="notizie/nuova-notizia/">
   <span class="label">In evidenza</span><br>
-  <span class="title">Nuova notizia a tutti, domenica 18 ottobre 2026</span>
+  <span class="title">Benvenuti nel nuovo look del nostro sito!</span>
 </a>
