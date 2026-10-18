@@ -7,23 +7,4 @@
 <section class="prose">
   {{ .Content }}
 </section>
-
-{{ with first 5 (where site.RegularPages "Section" "notizie").ByDate.Reverse }}
-<h2>Ultime notizie</h2>
-<ul class="post-list">
-  {{ range . }}
-  <li>
-    <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date | time.Format ":date_medium" }}</time>
-    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-  </li>
-  {{ end }}
-</ul>
-{{ end }}
-
-{{ with first 3 (where site.RegularPages "Section" "foto").ByDate.Reverse }}
-<h2>Foto</h2>
-<div class="event-grid">
-  {{ range . }}{{ partial "event-card.html" . }}{{ end }}
-</div>
-{{ end }}
 {{ end }}
