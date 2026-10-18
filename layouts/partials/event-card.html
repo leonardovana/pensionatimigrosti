@@ -1,0 +1,13 @@
+{{/* One gallery event as a card: cover photo, title, date, photo count. */}}
+{{ $photos := .Resources.ByType "image" }}
+{{ $cover := "" }}
+{{ with .Params.cover }}{{ $cover = $.Resources.GetMatch . }}{{ end }}
+{{ if not $cover }}{{ $cover = index $photos 0 }}{{ end }}
+<a class="event-card" href="{{ .RelPermalink }}">
+  {{ with $cover }}
+    {{ $thumb := .Fill "600x400 Center" }}
+    <img src="{{ $thumb.RelPermalink }}" width="{{ $thumb.Width }}" height="{{ $thumb.Height }}" alt="" loading="lazy">
+  {{ end }}
+  <span class="event-title">{{ .Title }}</span>
+  <span class="meta">{{ .Date.Format "2 Jan 2006" }}{{ with .Params.location }} · {{ . }}{{ end }} · {{ len $photos }} photo{{ if ne (len $photos) 1 }}s{{ end }}</span>
+</a>

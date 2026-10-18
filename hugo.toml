@@ -1,0 +1,36 @@
+# Site settings. baseURL is overridden by the GitHub Pages workflow.
+baseURL = "https://example.org/"
+languageCode = "en"
+title = "My Website"
+enableRobotsTXT = true
+disableKinds = ["taxonomy", "term"]
+
+[params]
+  description = "Notes, stories and photos."
+  author = "Patrick"
+
+[menus]
+  [[menus.main]]
+    name = "Home"
+    pageRef = "/"
+    weight = 10
+  [[menus.main]]
+    name = "Posts"
+    pageRef = "/posts"
+    weight = 20
+  [[menus.main]]
+    name = "Gallery"
+    pageRef = "/gallery"
+    weight = 30
+  [[menus.main]]
+    name = "About"
+    pageRef = "/about"
+    weight = 40
+
+[markup.goldmark.renderer]
+  # Allow raw HTML inside Markdown.
+  unsafe = true
+
+[imaging]
+  quality = 82
+  resampleFilter = "Lanczos"

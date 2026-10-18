@@ -1,0 +1,9 @@
+{{ define "main" }}
+<section class="prose">
+  <h1>{{ .Title }}</h1>
+  {{ .Content }}
+</section>
+<div class="event-grid">
+  {{ range .Pages.ByDate.Reverse }}{{ partial "event-card.html" . }}{{ end }}
+</div>
+{{ end }}

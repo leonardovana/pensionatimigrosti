@@ -1,0 +1,24 @@
+{{ define "main" }}
+<section class="prose">
+  {{ .Content }}
+</section>
+
+{{ with first 5 (where site.RegularPages "Section" "posts").ByDate.Reverse }}
+<h2>Latest posts</h2>
+<ul class="post-list">
+  {{ range . }}
+  <li>
+    <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 Jan 2006" }}</time>
+    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+  </li>
+  {{ end }}
+</ul>
+{{ end }}
+
+{{ with first 3 (where site.RegularPages "Section" "gallery").ByDate.Reverse }}
+<h2>Latest galleries</h2>
+<div class="event-grid">
+  {{ range . }}{{ partial "event-card.html" . }}{{ end }}
+</div>
+{{ end }}
+{{ end }}
