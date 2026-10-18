@@ -7,6 +7,8 @@
   {{ with $cover }}
     {{ $thumb := .Fill "600x400 Center" }}
     <img src="{{ $thumb.RelPermalink }}" width="{{ $thumb.Width }}" height="{{ $thumb.Height }}" alt="" loading="lazy">
+  {{ else }}
+    <span class="no-photo">{{ partial "sun.svg" }}</span>
   {{ end }}
   <span class="event-title">{{ .Title }}</span>
   <span class="meta">{{ .Date | time.Format ":date_medium" }}{{ with .Params.location }} · {{ . }}{{ end }} · {{ len $photos }} foto</span>

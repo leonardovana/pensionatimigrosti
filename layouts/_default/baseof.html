@@ -12,23 +12,27 @@
 </head>
 <body>
   <header class="site-header">
-    <div>
-      <a class="brand" href="{{ site.Home.RelPermalink }}">{{ site.Title }}</a>
-      <p class="tagline">{{ site.Params.description }}</p>
-    </div>
+    <div class="inner">
+    <a class="brand" href="{{ site.Home.RelPermalink }}">
+      {{ partial "sun.svg" }}
+      <span><span class="brand-name">{{ site.Title }}</span><span class="tagline">{{ site.Params.description }}</span></span>
+    </a>
     <nav>
       {{ $current := . }}
       {{ range site.Menus.main }}
-        <a href="{{ .URL }}"{{ if or ($current.IsMenuCurrent "main" .) ($current.HasMenuCurrent "main" .) }} aria-current="page"{{ end }}>{{ .Name }}</a>
+        <a href="{{ .URL }}"{{ if or ($current.IsMenuCurrent "main" .) ($current.HasMenuCurrent "main" .) (and $current.IsHome (eq .URL site.Home.RelPermalink)) }} aria-current="page"{{ end }}>{{ .Name }}</a>
       {{ end }}
     </nav>
+    </div>
   </header>
   <main>
     {{ block "main" . }}{{ end }}
   </main>
   <footer class="site-footer">
+    <div class="inner">
     © {{ now.Year }} {{ site.Title }}
     {{ with site.GetPage "/privacy" }} · <a href="{{ .RelPermalink }}">{{ .Title }}</a>{{ end }}
+    </div>
   </footer>
 </body>
 </html>
