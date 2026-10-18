@@ -2,10 +2,6 @@
 title: "Home"
 ---
 
-L'Associazione s'impegna a tenere sempre vivo e a rispettare lo spirito di
-appartenenza alla Migros, e organizza manifestazioni sociali, ricreative e
-culturali per i Soci.
-
 <section class="featured-article">
   <p class="label">In evidenza</p>
   <h2>Benvenuti nel nuovo look del nostro sito!</h2>
