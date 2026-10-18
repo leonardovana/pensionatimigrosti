@@ -12,7 +12,7 @@
 </head>
 <body>
   <header class="site-header">
-    <a class="brand" href="{{ "/" | relURL }}">{{ site.Title }}</a>
+    <a class="brand" href="{{ site.Home.RelPermalink }}">{{ site.Title }}</a>
     <nav>
       {{ $current := . }}
       {{ range site.Menus.main }}
