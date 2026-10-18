@@ -1,5 +1,22 @@
 {{ define "main" }}
 <section class="prose">
+  <h1>{{ .Title }}</h1>
   {{ .Content }}
 </section>
+
+{{ $news := site.GetPage "section" "notizie" }}
+{{ if $news }}
+  {{ $latest := first 1 ($news.Pages.ByDate.Reverse) }}
+  {{ with index $latest 0 }}
+    <article class="featured-news">
+      <p class="label">Ultima notizia</p>
+      <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+      <p><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date | time.Format ":date_medium" }}</time></p>
+      <div class="prose">{{ .Summary }}</div>
+      <p><a href="{{ .RelPermalink }}">Leggi la notizia completa</a></p>
+    </article>
+  {{ else }}
+    <p>Non ci sono ancora notizie pubblicate.</p>
+  {{ end }}
+{{ end }}
 {{ end }}
