@@ -2,7 +2,7 @@
 <section class="prose">
   <p class="meta"><a href="{{ .Parent.RelPermalink }}">← {{ .Parent.Title }}</a></p>
   <h1>{{ .Title }}</h1>
-  <p class="meta">{{ .Date | time.Format ":date_long" }}{{ with .Params.location }} · {{ . }}{{ end }}</p>
+  <p class="meta">{{ .Params.when | default (.Date | time.Format ":date_long") }}{{ with .Params.location }} · {{ . }}{{ end }}</p>
   {{ .Content }}
 </section>
 

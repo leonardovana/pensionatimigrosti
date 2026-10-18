@@ -1,0 +1,4 @@
+{{/* A PDF from static/documenti: {{< pdf file="invito.pdf" title="Invito" >}} */}}
+{{ $url := printf "documenti/%s" (.Get "file") | relURL }}
+<p><a class="button" href="{{ $url }}">📄 {{ .Get "title" | default "Scarica il PDF" }}</a></p>
+{{ if .Get "embed" }}<object class="pdf-embed" data="{{ $url }}" type="application/pdf" aria-label="{{ .Get "title" }}"></object>{{ end }}

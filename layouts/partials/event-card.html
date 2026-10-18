@@ -11,5 +11,5 @@
     <span class="no-photo">{{ partial "sun.svg" }}</span>
   {{ end }}
   <span class="event-title">{{ .Title }}</span>
-  <span class="meta">{{ .Date | time.Format ":date_medium" }}{{ with .Params.location }} · {{ . }}{{ end }} · {{ len $photos }} foto</span>
+  <span class="meta">{{ .Params.when | default (.Date | time.Format ":date_medium") }}{{ with .Params.location }} · {{ . }}{{ end }} · {{ len $photos }} foto</span>
 </a>
