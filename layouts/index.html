@@ -1,4 +1,8 @@
 {{ define "main" }}
+<article class="prose">
+  {{ .Content }}
+</article>
+
 {{ $news := site.GetPage "section" "notizie" }}
 {{ if $news }}
   {{ $latest := first 1 ($news.Pages.ByDate.Reverse) }}
