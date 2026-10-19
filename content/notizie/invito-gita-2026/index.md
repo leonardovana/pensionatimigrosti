@@ -1,8 +1,10 @@
 ---
-title: "Invito gita 2026"
+title: "Archivio – Invito gita 2026"
 date: 2026-07-20
 author: "Leo Vananti"
 ---
+
+> **Archivio:** la gita del 22 settembre 2026 si è già svolta. Questa pagina è conservata per consultare il programma e l’invito originale.
 
 ## Pensionati Migros Ticino – Olivone, 22.09.26
 
@@ -39,4 +41,4 @@ devono essere comunicate.
 L'APMT non si assume responsabilità per eventuali incidenti o danni a cose o persone
 che si verificassero prima, durante e dopo la gita.
 
-{{< pdf file="invito-gita-2026.pdf" title="Invito completo con tagliando d'iscrizione (PDF)" embed="true" >}}
+{{< pdf file="invito-gita-2026.pdf" title="Invito originale con tagliando d'iscrizione (PDF)" embed="true" >}}
