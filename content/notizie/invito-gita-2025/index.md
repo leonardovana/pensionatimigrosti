@@ -18,4 +18,4 @@ annuale uscita.
 
 Portare passaporto o carta d'identità.
 
-{{< pdf file="invito-gita-2025.pdf" title="Invito completo con orari e modulo d'iscrizione (PDF)" >}}
+{{< pdf file="invito-gita-2025.pdf" title="Apri l'invito completo con orari e modulo d'iscrizione (PDF)" embed="true" >}}
