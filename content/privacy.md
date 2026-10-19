@@ -2,10 +2,11 @@
 title: "Privacy Policy"
 ---
 
-## Chi siamo
+## Chi è responsabile
 
-Questo è il sito dell'Associazione Pensionati Migros Ticino (APMT), Casella Postale 39,
-6592 S. Antonino. Contatto: [pensionati@migrosticino.ch](mailto:pensionati@migrosticino.ch).
+Responsabile di questo sito e dei dati personali che vi sono pubblicati è
+l'Associazione Pensionati Migros Ticino (APMT), Casella Postale 39, 6592 S. Antonino.
+Contatto: [pensionati@migrosticino.ch](mailto:pensionati@migrosticino.ch).
 
 ## Quali dati raccogliamo
 
@@ -20,13 +21,9 @@ registra l'indirizzo IP dei visitatori per motivi tecnici e di sicurezza. Maggio
 informazioni nella
 [privacy policy di GitHub](https://docs.github.com/it/site-policy/privacy-policies/github-general-privacy-statement).
 
-## Foto
+## Chiedere la rimozione di una foto o di un dato
 
-Le foto delle nostre manifestazioni sono pubblicate per i Soci. Chi desidera che una
-foto in cui compare venga tolta dal sito può scriverci all'indirizzo qui sopra:
-la rimuoveremo.
-
-## Quali diritti hai sui tuoi dati
-
-Puoi chiederci in ogni momento informazioni sui dati che ti riguardano, la loro
-correzione o la loro cancellazione, scrivendo all'indirizzo qui sopra.
+Chi non desidera comparire su una foto o che un suo dato sia pubblicato può
+scriverci all'indirizzo qui sopra. Toglieremo la foto o il dato dal sito al più
+presto. Le versioni precedenti restano nella cronologia del repository su GitHub;
+su richiesta le cancelliamo anche da lì.
