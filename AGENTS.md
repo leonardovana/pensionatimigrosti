@@ -6,7 +6,7 @@ Questo repository contiene il sito dell'Associazione Pensionati Migros Ticino. L
 
 - Per cambiare testi, controllare prima i file Markdown esistenti e modificare il file più pertinente.
 - Testo della home page: `content/_index.md`.
-- Notizie: `content/notizie/`.
+- Notizie: `content/notizie/`, una cartella per notizia con il file `index.md` e tutti i suoi documenti (PDF) e immagini. Non usare `static/` per i documenti di una notizia e non creare notizie come file `.md` singoli. I PDF si richiamano con lo shortcode `pdf` (`file` = nome del file nella cartella della notizia), le immagini con un link relativo al nome del file.
 - Album fotografici: `content/foto/`, una cartella per evento con un file `index.md` e le relative immagini.
 - Altre pagine informative: controllare `content/associazione/` e i file Markdown nella cartella `content/`.
 - Mantenere la struttura, il design, l'accessibilità e le funzionalità esistenti, salvo richiesta esplicita dell'utente.

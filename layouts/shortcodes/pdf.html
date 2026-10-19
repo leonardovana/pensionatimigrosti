@@ -1,4 +1,9 @@
-{{/* A PDF from static/documenti: {{< pdf file="invito.pdf" title="Invito" >}} */}}
-{{ $url := printf "documenti/%s" (.Get "file") | relURL }}
-<p><a class="button" href="{{ $url }}">📄 {{ .Get "title" | default "Scarica il PDF" }}</a></p>
-{{ if .Get "embed" }}<object class="pdf-embed" data="{{ $url }}" type="application/pdf" aria-label="{{ .Get "title" }}"></object>{{ end }}
+{{/* A PDF in the news item's own folder:
+     {{< pdf file="invito.pdf" title="Invito (PDF)" embed="true" >}} */}}
+{{ $file := .Get "file" }}
+{{ with .Page.Resources.Get $file }}
+  <p><a class="button" href="{{ .RelPermalink }}">📄 {{ $.Get "title" | default "Scarica il PDF" }}</a></p>
+  {{ if $.Get "embed" }}<object class="pdf-embed" data="{{ .RelPermalink }}" type="application/pdf" aria-label="{{ $.Get "title" }}"></object>{{ end }}
+{{ else }}
+  {{ errorf "PDF %q non trovato nella cartella della notizia %s (%s)" $file $.Page.File.Dir $.Position }}
+{{ end }}

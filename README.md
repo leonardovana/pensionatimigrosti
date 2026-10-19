@@ -15,7 +15,19 @@ Di norma è sufficiente modificare il testo nel file senza cambiare il codice o 
 
 ## Aggiungere una notizia
 
-1. Crea una cartella per la notizia dentro `content/notizie/`, usando un nome breve senza spazi, per esempio `gita-autunnale`.
+Ogni notizia ha una propria cartella dentro `content/notizie/`. Nella cartella si
+mettono il testo e **tutti i documenti e le immagini della notizia**:
+
+```
+content/notizie/gita-autunnale/
+  index.md            il testo della notizia
+  invito.pdf          documenti da scaricare (facoltativi)
+  programma.jpg       immagini (facoltative)
+```
+
+1. Crea una cartella per la notizia dentro `content/notizie/`, usando un nome breve
+   senza spazi né accenti, per esempio `gita-autunnale`. Il nome diventa l'indirizzo
+   della pagina: `.../notizie/gita-autunnale/`.
 2. Crea al suo interno un file chiamato `index.md`.
 3. Inserisci titolo, data e testo. Esempio:
 
@@ -23,13 +35,33 @@ Di norma è sufficiente modificare il testo nel file senza cambiare il codice o 
    ---
    title: "Gita autunnale"
    date: 2026-10-18
+   author: "Pasquale Branca"
    draft: false
    ---
    ```
 
    Scrivi il testo della notizia sotto la seconda riga di tre trattini.
+   Con `draft: true` la notizia resta una bozza e non compare sul sito.
 
-4. Salva la modifica. La notizia apparirà sul sito dopo la pubblicazione delle modifiche.
+4. Se la notizia ha documenti o immagini, copiali nella stessa cartella e
+   richiamali nel testo:
+
+   - **PDF**, con un pulsante per scaricarlo:
+
+     ```
+     {{< pdf file="invito.pdf" title="Invito completo (PDF)" >}}
+     ```
+
+     Aggiungi `embed="true"` per mostrare il PDF anche dentro la pagina.
+     Se il nome del file è sbagliato, il sito non viene pubblicato e l'errore
+     indica la notizia e il file da correggere.
+
+   - **Immagine:** `![Descrizione dell'immagine](programma.jpg)`
+
+5. Salva la modifica. La notizia apparirà sul sito dopo la pubblicazione delle modifiche.
+
+In alternativa, il comando `hugo new content notizie/gita-autunnale/index.md` crea
+la cartella e il file `index.md` già pronti (come bozza).
 
 ## Aggiungere fotografie
 
