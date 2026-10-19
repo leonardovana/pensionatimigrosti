@@ -1,8 +1,10 @@
 ---
-title: "Invito gita 2025"
+title: "Archivio – Invito gita 2025"
 date: 2025-06-28
 author: "Pasquale Branca"
 ---
+
+> **Archivio:** la gita del 16 settembre 2025 si è già svolta. Questa pagina è conservata per consultare il programma e l’invito originale.
 
 ## Gita pensionati Migros Ticino e Ferrovia Monte Generoso
 
@@ -18,4 +20,4 @@ annuale uscita.
 
 Portare passaporto o carta d'identità.
 
-{{< pdf file="invito-gita-2025.pdf" title="Apri l'invito completo con orari e modulo d'iscrizione (PDF)" embed="true" >}}
+{{< pdf file="invito-gita-2025.pdf" title="Invito originale con orari e modulo d'iscrizione (PDF)" embed="true" >}}
