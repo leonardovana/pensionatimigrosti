@@ -16,3 +16,4 @@ weight: 20
 ## Revisori
 
 - **Yvonne Richina**
+- **Edi Barri**
