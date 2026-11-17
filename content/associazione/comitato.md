@@ -15,5 +15,4 @@ weight: 20
 
 ## Revisori
 
-- **Giuseppe Caccialanza**
 - **Yvonne Richina**
